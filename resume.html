@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silvestr Liskin - Robot Programmer CV</title>
+    <meta name="description"
+        content="Silvestr Liskin - Industrial Robot Programmer & Automation Engineer. Expert in KUKA, ABB, FANUC, ESTUN robotics and Siemens PLC integration.">
+    <meta name="keywords"
+        content="Robot Programmer, KUKA KRL, ABB RAPID, FANUC, ESTUN, Automation Engineer, PLC, Industrial Robotics">
+    <meta name="author" content="Silvestr Liskin">
+    <meta property="og:title" content="Silvestr Liskin - Robot Programmer CV">
+    <meta property="og:description"
+        content="Industrial Robot Programmer & Automation Engineer specializing in KUKA, ABB, FANUC robotics.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/SilvestrLiskin">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="profile_photo.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --orange: #FF5E00;
+            --orange-glow: rgba(255, 94, 0, 0.4);
+            --yellow: #FFC107;
+            --red: #D32F2F;
+            --green: #4CAF50;
+            --blue: #2196F3;
+
+            /* Glassmorphism Variables */
+            --bg-gradient: radial-gradient(circle at top right, #1a1a1a, #0d0d0d);
+            --glass-bg: rgba(30, 30, 30, 0.6);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-highlight: rgba(255, 255, 255, 0.15);
+            --sidebar-glass: rgba(20, 20, 20, 0.7);
+
+            --text-main: #E0E0E0;
+            --text-muted: #A0A0A0;
+            --grid-color: rgba(255, 255, 255, 0.04);
+            --tech-accent: rgba(255, 94, 0, 0.15);
+
+            --shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Light Theme overrides */
+        .light-mode {
+            --bg-gradient: radial-gradient(circle at top right, #f0f0f0, #e0e0e0);
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(0, 0, 0, 0.1);
+            --glass-highlight: rgba(255, 255, 255, 0.4);
+            --sidebar-glass: rgba(245, 245, 245, 0.75);
+
+            --text-main: #222;
+            --text-muted: #555;
+            --grid-color: rgba(0, 0, 0, 0.04);
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #111;
+            background-image: var(--bg-gradient);
+            color: var(--text-main);
+            font-size: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            min-height: 100vh;
+            transition: background 0.3s;
+        }
+
+        /* Toolbar */
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 8px 16px;
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+
+        .lang-btn,
+        .theme-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid transparent;
+            padding: 6px 14px;
+            cursor: pointer;
+            font-family: 'Chakra Petch', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover,
+        .theme-btn:hover {
+            color: var(--text-main);
+            background: var(--glass-highlight);
+        }
+
+        .lang-btn.active {
+            background: var(--orange);
+            color: black;
+            box-shadow: 0 0 10px var(--orange-glow);
+        }
+
+        .theme-btn {
+            border-left: 1px solid var(--glass-border);
+            padding-left: 18px;
+            margin-left: 5px;
+            border-radius: 0 20px 20px 0;
+        }
+
+        /* A4 Page Container */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2px;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            box-shadow: var(--shadow);
+            position: relative;
+            background-image:
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+                radial-gradient(circle at 50% 50%, rgba(255, 94, 0, 0.03) 0%, transparent 60%);
+            background-size: 30px 30px, 30px 30px, 100% 100%;
+            overflow: hidden;
+        }
+
+        /* Tech Accents */
+        .tech-marker {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 1px solid var(--orange);
+            opacity: 0.5;
+        }
+
+        .tm-tl {
+            top: 10px;
+            left: 10px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .tm-tr {
+            top: 10px;
+            right: 10px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .tm-bl {
+            bottom: 10px;
+            left: 10px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .tm-br {
+            bottom: 10px;
+            right: 10px;
+            border-left: none;
+            border-top: none;
+        }
+
+        /* Cyberpunk Corners */
+        .page::before,
+        .page::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--orange);
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .page::before {
+            top: 0;
+            left: 0;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .page::after {
+            bottom: 0;
+            right: 0;
+            border-left: 0;
+            border-top: 0;
+        }
+
+        .page:hover::before,
+        .page:hover::after {
+            width: 30px;
+            height: 30px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Chakra Petch', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        .animate-in-left {
+            animation: fadeInLeft 0.5s ease cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: var(--sidebar-glass);
+            border-right: 1px solid var(--glass-border);
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .photo-container {
+            position: relative;
+            width: 90px;
+            margin: 0 auto 10px auto;
+        }
+
+        .photo-frame {
+            width: 90px;
+            height: 90px;
+            border: 2px solid var(--orange);
+            background: #000;
+            position: relative;
+            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+            overflow: hidden;
+            box-shadow: 0 0 15px var(--orange-glow);
+            transition: transform 0.3s;
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.02);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            transform: scale(1.25);
+        }
+
+        .open-badge {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--green), #2E7D32);
+            color: white;
+            font-size: 0.55rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(76, 175, 80, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(76, 175, 80, 0);
+            }
+        }
+
+        .sidebar-section {
+            margin-bottom: 5px;
+        }
+
+        .sidebar-section h3 {
+            color: var(--orange);
+            font-size: 0.75rem;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 4px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-shadow: 0 0 8px var(--orange-glow);
+        }
+
+        .sidebar-section h3 i {
+            font-size: 0.7rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 6px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .contact-item:hover {
+            color: var(--text-main);
+        }
+
+        .contact-item i {
+            color: var(--orange);
+            width: 12px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dotted transparent;
+        }
+
+        .contact-item a:hover {
+            border-bottom-color: var(--orange);
+        }
+
+        /* Map */
+        .map-container {
+            position: relative;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--glass-border);
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .map-pin {
+            position: absolute;
+            top: 35%;
+            left: 25%;
+            width: 8px;
+            height: 8px;
+            background: var(--orange);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px rgba(255, 94, 0, 0.3);
+            animation: ping 1.5s infinite;
+        }
+
+        @keyframes ping {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 0 0 10px rgba(255, 94, 0, 0);
+            }
+        }
+
+        .map-label {
+            position: absolute;
+            top: 25%;
+            left: 35%;
+            font-size: 0.55rem;
+            color: var(--orange);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Skills */
+        .skill-bar {
+            margin-bottom: 8px;
+        }
+
+        .skill-bar:hover .skill-bar-name {
+            color: var(--text-main);
+        }
+
+        .skill-bar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .skill-bar-name {
+            font-size: 0.68rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-family: 'Chakra Petch', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s;
+        }
+
+        .skill-bar-name .robot-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-bar-track {
+            height: 5px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 8px currentColor;
+        }
+
+        .app-tag,
+        .eoat-tag,
+        .mini-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3px 6px;
+            margin: 2px;
+            border-radius: 3px;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            border: 1px solid var(--glass-border);
+            transition: all 0.2s;
+        }
+
+        .app-tag:hover,
+        .eoat-tag:hover,
+        .mini-tag:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
+
+        .app-tag {
+            border-left: 2px solid var(--orange);
+        }
+
+        /* QR Code */
+        .qr-section {
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 12px;
+            border-top: 1px dashed var(--glass-border);
+        }
+
+        .qr-section img {
+            width: 60px;
+            height: 60px;
+            background: white;
+            padding: 4px;
+            border-radius: 6px;
+        }
+
+        /* MAIN COLUMN */
+        .main {
+            padding: 30px 35px;
+        }
+
+        .header {
+            margin-bottom: 25px;
+            border-left: 4px solid var(--orange);
+            padding-left: 15px;
+            background: linear-gradient(90deg, rgba(255, 94, 0, 0.05), transparent);
+        }
+
+        .name-block h1 {
+            font-size: 2.2rem;
+            line-height: 0.9;
+            color: var(--text-main);
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .name-block h1 span {
+            color: var(--orange);
+        }
+
+        .role {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .summary {
+            margin-top: 10px;
+            color: var(--text-main);
+            line-height: 1.4;
+            text-align: justify;
+            font-size: 0.75rem;
+            opacity: 0.85;
+        }
+
+        /* Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--glass-border);
+            padding: 12px 5px;
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--orange), transparent);
+            opacity: 0.5;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 94, 0, 0.3);
+        }
+
+        .stat-number {
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--orange);
+            line-height: 1;
+            text-shadow: 0 0 10px rgba(255, 94, 0, 0.3);
+        }
+
+        .stat-label {
+            font-size: 0.55rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .section-title {
+            color: var(--orange);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--glass-border);
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+        }
+
+        .dev-card {
+            background: linear-gradient(145deg, rgba(255, 94, 0, 0.05), rgba(0, 0, 0, 0.2));
+            border: 1px solid rgba(255, 94, 0, 0.3);
+            padding: 12px;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .dev-card:hover {
+            border-color: var(--orange);
+            box-shadow: 0 4px 12px rgba(255, 94, 0, 0.1);
+        }
+
+        .dev-card::before {
+            content: 'OPEN SOURCE';
+            position: absolute;
+            top: -7px;
+            right: 10px;
+            background: var(--orange);
+            color: black;
+            padding: 0 6px;
+            font-size: 0.5rem;
+            font-weight: 700;
+            border-radius: 2px;
+            font-family: 'Chakra Petch';
+            letter-spacing: 1px;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--orange), transparent);
+            opacity: 0.3;
+        }
+
+        .job-item {
+            margin-bottom: 18px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .job-item::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 4px;
+            width: 8px;
+            height: 8px;
+            background: var(--bg-gradient);
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 5px var(--orange-glow);
+        }
+
+        .job-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-role {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .job-date {
+            font-family: 'JetBrains Mono';
+            font-size: 0.65rem;
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .job-comp {
+            color: var(--yellow);
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .job-desc li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3px;
+            color: var(--text-muted);
+            font-size: 0.72rem;
+            line-height: 1.35;
+            list-style: none;
+        }
+
+        .job-desc li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--orange);
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .edu-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .edu-item:hover {
+            border-color: var(--glass-border);
+        }
+
+        .edu-deg {
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--text-main);
+        }
+
+        .edu-uni {
+            font-family: 'JetBrains Mono';
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media screen and (max-width: 900px) {
+            body {
+                padding: 15px;
+                font-size: 12px;
+            }
+
+            .page {
+                width: 100%;
+                min-height: auto;
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px;
+                border-right: none;
+                border-bottom: 1px solid var(--glass-border);
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .photo-container {
+                grid-column: 1 / -1;
+                width: 120px;
+            }
+
+            .photo-frame {
+                width: 120px;
+                height: 120px;
+            }
+
+            .main {
+                padding: 25px;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .controls {
+                position: sticky;
+                top: 10px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .sidebar-section {
+                break-inside: avoid;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-3d {
+                height: 300px !important;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            .controls {
+                display: none !important;
+            }
+
+            .page {
+                box-shadow: none !important;
+                border: none !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                background: white !important;
+                color: black !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                grid-template-columns: 28% 72% !important;
+                /* Slightly smaller sidebar */
+                overflow: hidden !important;
+            }
+
+            .page::before,
+            .page::after {
+                display: none !important;
+            }
+
+            .sidebar {
+                background: #f8f8f8 !important;
+                color: black !important;
+                border-right: 1px solid #ccc !important;
+                padding: 15px !important;
+                gap: 8px !important;
+            }
+
+            .main {
+                padding: 15px 20px !important;
+                color: black !important;
+            }
+
+            /* Compact Typography for Print */
+            h1 {
+                font-size: 1.8rem !important;
+                margin-bottom: 2px !important;
+            }
+
+            .role {
+                font-size: 0.8rem !important;
+                margin-bottom: 5px !important;
+            }
+
+            .summary {
+                font-size: 0.65rem !important;
+                line-height: 1.2 !important;
+                margin-top: 5px !important;
+            }
+
+            .header {
+                margin-bottom: 10px !important;
+                padding-left: 10px !important;
+                border-left-width: 3px !important;
+            }
+
+            .stats-row {
+                margin-bottom: 10px !important;
+                gap: 8px !important;
+            }
+
+            .stat-box {
+                padding: 4px !important;
+                border: 1px solid #eee !important;
+                box-shadow: none !important;
+            }
+
+            .stat-number {
+                font-size: 1.1rem !important;
+                text-shadow: none !important;
+                color: #d35400 !important;
+            }
+
+            .stat-label {
+                font-size: 0.45rem !important;
+                margin-top: 0 !important;
+            }
+
+            .dev-card {
+                padding: 6px !important;
+                margin-bottom: 10px !important;
+                background: #fff5f0 !important;
+                border: 1px solid #ffccbc !important;
+            }
+
+            .dev-card div {
+                font-size: 0.7rem !important;
+            }
+
+            /* Compact Lists */
+            .section-title {
+                font-size: 0.8rem !important;
+                margin-bottom: 5px !important;
+                padding-bottom: 2px !important;
+                color: #d35400 !important;
+            }
+
+            .timeline {
+                padding-left: 12px !important;
+            }
+
+            .job-item {
+                margin-bottom: 8px !important;
+            }
+
+            .job-role {
+                font-size: 0.75rem !important;
+                color: black !important;
+            }
+
+            .job-comp {
+                font-size: 0.65rem !important;
+                margin-bottom: 1px !important;
+                color: #c0392b !important;
+            }
+
+            .job-desc li {
+                font-size: 0.62rem !important;
+                margin-bottom: 1px !important;
+                line-height: 1.1 !important;
+                color: #333 !important;
+            }
+
+            .skill-bar {
+                margin-bottom: 4px !important;
+            }
+
+            .skill-bar-name {
+                font-size: 0.6rem !important;
+                color: #333 !important;
+            }
+
+            .skill-bar-track {
+                height: 3px !important;
+                background: #ddd !important;
+            }
+
+            .photo-frame {
+                width: 70px !important;
+                height: 70px !important;
+                border-color: #d35400 !important;
+            }
+
+            .photo-container {
+                width: 70px !important;
+                margin-bottom: 5px !important;
+            }
+
+            .sidebar-section h3 {
+                font-size: 0.65rem !important;
+                margin-bottom: 4px !important;
+                color: #d35400 !important;
+                text-shadow: none !important;
+            }
+
+            .contact-item {
+                font-size: 0.6rem !important;
+                margin-bottom: 2px !important;
+                gap: 4px !important;
+                color: #333 !important;
+            }
+
+            .contact-item i {
+                color: #d35400 !important;
+            }
+
+            .qr-section {
+                margin-top: 5px !important;
+                padding-top: 5px !important;
+            }
+
+            .qr-section img {
+                width: 40px !important;
+                height: 40px !important;
+            }
+
+            .open-badge {
+                display: none !important;
+            }
+
+            .app-tag,
+            .eoat-tag,
+            .mini-tag {
+                padding: 1px 3px !important;
+                font-size: 0.55rem !important;
+                margin: 1px !important;
+                background: white !important;
+                border: 1px solid #ccc !important;
+                color: #333 !important;
+            }
+
+            .map-container,
+            .portfolio-3d {
+                display: none !important;
+            }
+
+            /* Hide map and 3D to save space */
+
+            /* Watermark for print */
+            .page::after {
+                content: 'SILVESTR LISKIN - CV';
+                position: fixed;
+                bottom: 5mm;
+                right: 10mm;
+                font-size: 8px;
+                color: #ccc;
+                display: block;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="controls">
+        <button class="lang-btn active" onclick="setLang('en')" aria-label="Switch to English">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')" aria-label="Türkçe'ye geç">TR</button>
+        <button class="lang-btn" onclick="setLang('ru')" aria-label="Переключить на русский">RU</button>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle light/dark theme">
+            <i class="fas fa-sun"></i> Light
+        </button>
+        <button class="theme-btn" onclick="window.print()" aria-label="Print resume"
+            style="border-left:1px solid var(--glass-border); margin-left:5px">
+            <i class="fas fa-print"></i> Print
+        </button>
+    </div>
+
+    <div class="page" id="cv-root">
+        <div class="tech-marker tm-tl"></div>
+        <div class="tech-marker tm-tr"></div>
+        <div class="tech-marker tm-bl"></div>
+        <div class="tech-marker tm-br"></div>
+    </div>
+
+    <script>
+        let isDark = true;
+
+        function toggleTheme() {
+            isDark = !isDark;
+            document.body.classList.toggle('light-mode');
+            const btn = document.querySelector('.theme-btn');
+            btn.innerHTML = isDark
+                ? '<i class="fas fa-sun"></i> Light'
+                : '<i class="fas fa-moon"></i> Dark';
+        }
+
+        const content = {
+            en: {
+                role: "Robot Programmer - Industrial Automation",
+                summary: "Robot Programmer & Automation Engineer (M.Sc.) designing, developing, and commissioning automated robotic systems. Expert in creating reliable, scalable solutions with KUKA, ABB, FANUC, and ESTUN robots. Specialized in Siemens PLC integration (S7), offline programming, and cycle time optimization for high-volume manufacturing.",
+                titles: {
+                    contacts: "Contact", robots: "Robot Ecosystems", sim: "Digital Twin",
+                    apps: "Core Processes", eoat: "End-of-Arm Tooling",
+                    industrial: "Control & Vision", exp: "Professional Experience",
+                    edu: "Education", langs: "Languages", extra: "Additional", certs: "Certifications",
+                    portfolio: "3D Portfolio"
+                },
+                stats: [
+                    { num: "4", label: "Robot Brands" },
+                    { num: "10+", label: "Cells Commissioned" },
+                    { num: "5+", label: "Years Experience" },
+                    { num: "12", label: "Countries" }
+                ],
+                contact: { loc: "Bursa, Turkey", phone: "+90 505 047 6850" },
+                skills: [
+                    { name: "KUKA KRL", pct: 95, color: "#FF5E00", icon: "K" },
+                    { name: "ABB RAPID", pct: 80, color: "#FF9E00", icon: "A" },
+                    { name: "FANUC TP", pct: 70, color: "#FFC107", icon: "F" },
+                    { name: "ESTUN", pct: 70, color: "#D32F2F", icon: "E" }
+                ],
+                software: [
+                    { name: "WorkVisual", pct: 90, color: "#FF5E00", icon: "WV" },
+                    { name: "RobotStudio", pct: 85, color: "#FF9E00", icon: "RS" },
+                    { name: "RoboGuide", pct: 65, color: "#FFC107", icon: "RG" },
+                    { name: "TIA Portal", pct: 60, color: "#009688", icon: "TIA" }
+                ],
+                applications: ["Spot/Arc Welding", "Material Handling", "Palletizing", "Assembly", "Gluing"],
+                eoat: ["ARO Servo", "Fronius / SKS", "Venturi Grippers", "Custom EOAT"],
+                industrial_tags: ["Siemens PLC (S7)", "Offline Programming", "System Commissioning", "Profinet / EtherCAT", "SafeMove / Safety"],
+                dev_proj: {
+                    title: "KUKA KRL VS Code Extension",
+                    desc: "Open-source tool optimizing workflow for 400+ engineers. Features syntax highlighting and diagnostics."
+                },
+                langs: [
+                    { name: "Russian", level: "Native" },
+                    { name: "Turkish", level: "Fluent" },
+                    { name: "English", level: "Intermediate" },
+                    { name: "Kyrgyz", level: "Intermediate" }
+                ],
+                extra: [
+                    { icon: "fa-car", text: "Driver's License (B)" },
+                    { icon: "fa-plane", text: "Global Mobility" },
+                    { icon: "fa-passport", text: "Valid Passport" }
+                ],
+                certs: [
+                    { name: "ESTUN", org: "Official Integrator" },
+                    { name: "FANUC", org: "Certified Prog." },
+                    { name: "KUKA/ABB", org: "Advanced Ops" }
+                ],
+                exp: [
+                    {
+                        role: "Robot Programmer / Integrator",
+                        comp: "Teknorob (ABB & KUKA Partner)",
+                        date: "2023 - Present",
+                        desc: [
+                            "Programmed and optimized industrial robot programs (KUKA, ABB, ESTUN, FANUC) for custom automation cells.",
+                            "Integrated robots with Siemens PLC systems and HMI interfaces for seamless automation.",
+                            "Conducted on-site startup, system validation, and cycle time optimization, increasing throughput by 15%.",
+                            "Troubleshot robot motion and communication issues (Profinet/EtherCAT) to ensure zero-downtime production.",
+                            "Maintained technical documentation and ensured compliance with industrial safety standards (SafeMove)."
+                        ]
+                    },
+                    {
+                        role: "Commissioning Engineer",
+                        comp: "Ino Machinery",
+                        date: "Mar-Sep 2022",
+                        desc: [
+                            "Programmed and troubleshot CNC gantry systems and automated material handling lines.",
+                            "Diagnosed electrical and mechanical issues during system startup and pilot production.",
+                            "Collaborated with design teams to refine electrical schematics and maximize system reliability."
+                        ]
+                    },
+                    {
+                        role: "Electronic Technician",
+                        comp: "Jaguar Land Rover",
+                        date: "2015 - 2016",
+                        desc: [
+                            "Performed diagnostics on complex automotive electronics and control modules.",
+                            "Maintained technical documentation and ensured compliance with quality standards."
+                        ]
+                    }
+                ],
+                edu: [
+                    { deg: "M.Sc. Electronic Eng.", uni: "Uludağ University", year: "2022" },
+                    { deg: "B.Sc. Electronic Eng.", uni: "Kyrgyz National Uni.", year: "2017" }
+                ],
+                qr_label: "Scan for LinkedIn"
+            },
+            tr: {
+                role: "Endüstriyel Robot Programcısı",
+                summary: "Endüstriyel Robotik Entegrasyonunda uzmanlaşmış Otomasyon Mühendisi (Y.Müh.). KUKA, ABB, Fanuc ve ESTUN programlama. KUKA KRL VS Code Eklentisi geliştiricisi. Uluslararası seyahate hazır.",
+                titles: {
+                    contacts: "İletişim", robots: "Robot Becerileri", sim: "Simülasyon",
+                    apps: "Uygulamalar", eoat: "EOAT",
+                    industrial: "Protokoller & Safety", exp: "Deneyim",
+                    edu: "Eğitim", langs: "Diller", extra: "Ek Bilgi", certs: "Sertifikalar",
+                    portfolio: "3D Portföy"
+                },
+                stats: [
+                    { num: "4", label: "Robot Markası" },
+                    { num: "10+", label: "Hücre" },
+                    { num: "5+", label: "Yıl Deneyim" },
+                    { num: "12", label: "Ülke" }
+                ],
+                contact: { loc: "Bursa, Türkiye", phone: "+90 505 047 6850" },
+                skills: [
+                    { name: "KUKA KRL", pct: 95, color: "#FF5E00", icon: "K" },
+                    { name: "ABB RAPID", pct: 75, color: "#FF9E00", icon: "A" },
+                    { name: "FANUC TP", pct: 65, color: "#FFC107", icon: "F" },
+                    { name: "ESTUN", pct: 70, color: "#D32F2F", icon: "E" }
+                ],
+                software: [
+                    { name: "WorkVisual", pct: 90, color: "#FF5E00", icon: "WV" },
+                    { name: "RobotStudio", pct: 85, color: "#FF9E00", icon: "RS" },
+                    { name: "RoboGuide", pct: 65, color: "#FFC107", icon: "RG" },
+                    { name: "TIA Portal", pct: 60, color: "#009688", icon: "TIA" }
+                ],
+                applications: ["Punta Kaynak", "Gazaltı", "Paletleme", "Taşıma", "Yapıştırma"],
+                eoat: ["ARO Servo", "Fronius / SKS", "Vakum Tutucu", "Özel EOAT"],
+                industrial_tags: ["Siemens PLC (S7)", "Offline Programlama", "Sistem Devreye Alma", "Profinet / EtherCAT", "SafeMove / Güvenlik"],
+                dev_proj: {
+                    title: "KUKA KRL VS Code Eklentisi",
+                    desc: "KRL için popüler eklenti: syntax, folding, hata denetimi. Yüzlerce mühendis kullanıyor."
+                },
+                langs: [
+                    { name: "Rusça", level: "Anadil" },
+                    { name: "Türkçe", level: "Akıcı" },
+                    { name: "İngilizce", level: "Orta" },
+                    { name: "Kırgızca", level: "Orta" }
+                ],
+                extra: [
+                    { icon: "fa-car", text: "Ehliyet (B)" },
+                    { icon: "fa-plane", text: "Seyahate Hazır" },
+                    { icon: "fa-passport", text: "Geçerli Pasaport" }
+                ],
+                certs: [
+                    { name: "ESTUN", org: "Resmi" },
+                    { name: "FANUC", org: "Türkiye Tem." },
+                    { name: "KUKA/ABB", org: "Şirket İçi" }
+                ],
+                exp: [
+                    {
+                        role: "Robot Programcısı / Entegratör",
+                        comp: "Teknorob (ABB & KUKA Ortağı)",
+                        date: "2023 - Devam",
+                        desc: [
+                            "Otomotiv BiW üretimi için endüstriyel robot programlarını (KUKA, ABB, ESTUN, FANUC) programladı ve optimize etti.",
+                            "Kesintisiz otomasyon için robotları Siemens PLC sistemleri ve HMI arayüzleri ile entegre etti.",
+                            "Saha devreye alma, sistem doğrulama ve çevrim süresi optimizasyonu yaparak verimi %15 artırdı.",
+                            "Sıfır duruş süresi için robot hareket ve haberleşme (Profinet/EtherCAT) hatalarını giderdi.",
+                            "Teknik dokümantasyonu hazırladı ve endüstriyel güvenlik standartlarına (SafeMove) uygunluğu sağladı."
+                        ]
+                    },
+                    {
+                        role: "Devreye Alma Mühendisi",
+                        comp: "Ino Machinery",
+                        date: "Mar-Eyl 2022",
+                        desc: [
+                            "CNC ve gantry hatları.",
+                            "EPLAN, I/O testi, servo ayarı."
+                        ]
+                    },
+                    {
+                        role: "Elektronik Teknisyeni",
+                        comp: "Jaguar Land Rover",
+                        date: "2015 - 2016",
+                        desc: [
+                            "Otomotiv elektroniği arıza tespiti."
+                        ]
+                    }
+                ],
+                edu: [
+                    { deg: "Y.L. Elektronik Müh.", uni: "Uludağ Üniv.", year: "2022" },
+                    { deg: "Lisans Elektronik Müh.", uni: "Kırgız Milli Üni.", year: "2017" }
+                ],
+                qr_label: "LinkedIn için tarayın"
+            },
+            ru: {
+                role: "Программист промышленных роботов",
+                summary: "Инженер-автоматизатор (магистр), специализация — интеграция промышленных роботов. Программирование KUKA, ABB, Fanuc и ESTUN. Создатель расширения KUKA KRL для VS Code. Готов к международным командировкам.",
+                titles: {
+                    contacts: "Контакты", robots: "Навыки роботов", sim: "Симуляция",
+                    apps: "Применения", eoat: "EOAT",
+                    industrial: "Протоколы & Safety", exp: "Опыт",
+                    edu: "Образование", langs: "Языки", extra: "Доп. инфо", certs: "Сертификаты",
+                    portfolio: "3D Портфолио"
+                },
+                stats: [
+                    { num: "4", label: "Бренда роботов" },
+                    { num: "10+", label: "Ячеек" },
+                    { num: "5+", label: "Лет опыта" },
+                    { num: "12", label: "Стран" }
+                ],
+                contact: { loc: "Бурса, Турция", phone: "+90 505 047 6850" },
+                skills: [
+                    { name: "KUKA KRL", pct: 95, color: "#FF5E00", icon: "K" },
+                    { name: "ABB RAPID", pct: 75, color: "#FF9E00", icon: "A" },
+                    { name: "FANUC TP", pct: 65, color: "#FFC107", icon: "F" },
+                    { name: "ESTUN", pct: 70, color: "#D32F2F", icon: "E" }
+                ],
+                software: [
+                    { name: "WorkVisual", pct: 90, color: "#FF5E00", icon: "WV" },
+                    { name: "RobotStudio", pct: 85, color: "#FF9E00", icon: "RS" },
+                    { name: "RoboGuide", pct: 65, color: "#FFC107", icon: "RG" },
+                    { name: "TIA Portal", pct: 60, color: "#009688", icon: "TIA" }
+                ],
+                applications: ["Контактная сварка", "Дуговая", "Паллетирование", "Handling", "Клеевые"],
+                eoat: ["ARO Servo", "Fronius / SKS", "Вакуумные захваты", "Custom EOAT"],
+                industrial_tags: ["Siemens PLC (S7)", "Offline-программирование", "ПНР / Ввод в экспл.", "Profinet / EtherCAT", "SafeMove / Safety"],
+                dev_proj: {
+                    title: "KUKA KRL VS Code Extension",
+                    desc: "Популярное расширение для KRL: подсветка, фолдинг, диагностика. Сотни инженеров."
+                },
+                langs: [
+                    { name: "Русский", level: "Родной" },
+                    { name: "Турецкий", level: "Свободно" },
+                    { name: "Английский", level: "Средний" },
+                    { name: "Киргизский", level: "Средний" }
+                ],
+                extra: [
+                    { icon: "fa-car", text: "Права (B)" },
+                    { icon: "fa-plane", text: "Готов к командировкам" },
+                    { icon: "fa-passport", text: "Загранпаспорт" }
+                ],
+                certs: [
+                    { name: "ESTUN", org: "Офиц." },
+                    { name: "FANUC", org: "Турция" },
+                    { name: "KUKA/ABB", org: "Внутр." }
+                ],
+                exp: [
+                    {
+                        role: "Программист роботов / Интегратор",
+                        comp: "Teknorob (Партнёр ABB & KUKA)",
+                        date: "2023 - Сейчас",
+                        desc: [
+                            "Программирование и оптимизация промышленных роботов (KUKA, ABB, ESTUN, FANUC) для кастомных ячеек.",
+                            "Интеграция роботов с PLC Siemens и HMI для бесперебойной работы автоматизации.",
+                            "Проведение ПНР на объекте, валидация систем и оптимизация времени цикла (рост производительности на 15%).",
+                            "Устранение сбоев в движении роботов и коммуникации (Profinet/EtherCAT) для обеспечения безостановочного производства.",
+                            "Ведение технической документации и обеспечение соответствия стандартам промышленной безопасности (SafeMove)."
+                        ]
+                    },
+                    {
+                        role: "Инженер пусконаладки",
+                        comp: "Ino Machinery",
+                        date: "Март-Сен 2022",
+                        desc: [
+                            "ЧПУ и портальные системы.",
+                            "EPLAN, I/O тест, настройка серво."
+                        ]
+                    },
+                    {
+                        role: "Техник-электроник",
+                        comp: "Jaguar Land Rover",
+                        date: "2015 - 2016",
+                        desc: [
+                            "Диагностика автоэлектроники."
+                        ]
+                    }
+                ],
+                edu: [
+                    { deg: "Магистр электроники", uni: "Университет Улудаг", year: "2022" },
+                    { deg: "Бакалавр электроники", uni: "Кыргызский нац. унив.", year: "2017" }
+                ],
+                qr_label: "Сканируйте для LinkedIn"
+            }
+        };
+
+        const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.linkedin.com/in/silvestr-liskin-ab712920b/";
+
+        function setLang(l) {
+            const d = content[l];
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`button[onclick="setLang('${l}')"]`).classList.add('active');
+
+            const makeSkillBar = (name, pct, color, icon, delay) => `
+                <div class="skill-bar animate-in-left" style="animation-delay: ${delay}ms">
+                    <div class="skill-bar-header">
+                        <span class="skill-bar-name">
+                            <span class="robot-icon" style="background:${color}">${icon}</span>
+                            ${name}
+                        </span>
+                        <span class="skill-bar-pct">${pct}%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" style="width:${pct}%; background:${color}; box-shadow: 0 0 10px ${color}"></div>
+                    </div>
+                </div>
+            `;
+
+            const html = `
+                <div class="tech-marker tm-tl"></div>
+                <div class="tech-marker tm-tr"></div>
+                <div class="tech-marker tm-bl"></div>
+                <div class="tech-marker tm-br"></div>
+                <div class="sidebar">
+                    <div class="photo-container animate-in" style="animation-delay: 0ms">
+                        <div class="photo-frame">
+                            <img src="profile_photo.png" alt="Silvestr Liskin">
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 100ms">
+                        <h3><i class="fas fa-address-card"></i> ${d.titles.contacts}</h3>
+                        <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:silvlis@outlook.com">silvlis@outlook.com</a></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i> ${d.contact.phone}</div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> ${d.contact.loc}</div>
+                        <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/silvestr-liskin-ab712920b/">silvestr-liskin</a></div>
+                        <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/SilvestrLiskin">SilvestrLiskin</a></div>
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 200ms">
+                        <h3><i class="fas fa-robot"></i> ${d.titles.robots}</h3>
+                        ${d.skills.map((s, i) => makeSkillBar(s.name, s.pct, s.color, s.icon, 250 + i * 50)).join('')}
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 300ms">
+                        <h3><i class="fas fa-desktop"></i> ${d.titles.sim}</h3>
+                        ${d.software.map((s, i) => makeSkillBar(s.name, s.pct, s.color, s.icon, 450 + i * 50)).join('')}
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 400ms">
+                        <h3><i class="fas fa-industry"></i> ${d.titles.apps}</h3>
+                        <div style="display:flex; flex-wrap:wrap; gap:2px">
+                        ${d.applications.map(a => `<span class="app-tag">${a}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 450ms">
+                        <h3><i class="fas fa-wrench"></i> ${d.titles.eoat}</h3>
+                        <div style="display:flex; flex-wrap:wrap; gap:2px">
+                        ${d.eoat.map(e => `<span class="eoat-tag">${e}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 500ms">
+                        <h3><i class="fas fa-language"></i> ${d.titles.langs}</h3>
+                        ${d.langs.map(lg => `<div class="skill-bar" style="margin-bottom:4px"><div class="skill-bar-header"><span class="skill-bar-name">${lg.name}</span><span style="color:var(--orange); font-size:0.6rem; font-weight:700">${lg.level}</span></div></div>`).join('')}
+                    </div>
+
+                    <div class="sidebar-section animate-in" style="animation-delay: 550ms">
+                        <h3><i class="fas fa-plus-circle"></i> ${d.titles.extra}</h3>
+                        ${d.extra.map(e => `<div class="contact-item"><i class="fas ${e.icon}"></i> ${e.text}</div>`).join('')}
+                    </div>
+
+                    <div class="qr-section animate-in" style="animation-delay: 600ms">
+                        <img src="${qrUrl}" alt="QR Code">
+                        <div class="stat-label" style="margin-top:5px">${d.qr_label}</div>
+                    </div>
+                </div>
+
+                <div class="main">
+                    <div class="header animate-in" style="animation-delay: 100ms">
+                        <div class="name-block">
+                            <h1>SILVESTR <span>LISKIN</span></h1>
+                        </div>
+                        <div class="role">${d.role}</div>
+                        <div class="summary">${d.summary}</div>
+                    </div>
+
+                    <div class="stats-row">
+                        ${d.stats.map((s, i) => `
+                            <div class="stat-box animate-in" style="animation-delay: ${200 + i * 80}ms">
+                                <div class="stat-number">${s.num}</div>
+                                <div class="stat-label">${s.label}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="dev-card animate-in" style="animation-delay: 500ms">
+                         <div style="font-family:'Chakra Petch'; font-weight:700; color:var(--text-main); text-transform:uppercase; margin-bottom:4px; font-size:0.8rem">
+                            <i class="fas fa-code-branch" style="color:var(--orange); margin-right:6px"></i> ${d.dev_proj.title}
+                         </div>
+                         <div style="font-size:0.7rem; color:var(--text-muted); line-height:1.4">${d.dev_proj.desc}</div>
+                    </div>
+
+                    <div class="section-title animate-in" style="animation-delay: 550ms"><i class="fas fa-certificate"></i> ${d.titles.certs}</div>
+                    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:15px">
+                        ${d.certs.map(c => `<div class="app-tag" style="background:rgba(255,255,255,0.05)"><i class="fas fa-check-circle" style="color:var(--green); margin-right:4px"></i> <strong>${c.name}</strong> <span style="opacity:0.7">(${c.org})</span></div>`).join('')}
+                    </div>
+
+                    <div class="section-title animate-in" style="animation-delay: 600ms"><i class="fas fa-cogs"></i> ${d.titles.industrial}</div>
+                    <div style="margin-bottom:20px; display:flex; flex-wrap:wrap">
+                        ${d.industrial_tags.map(t => `<span class="mini-tag">${t}</span>`).join('')}
+                    </div>
+
+                    <div class="section-title animate-in" style="animation-delay: 650ms"><i class="fas fa-briefcase"></i> ${d.titles.exp}</div>
+                    <div class="timeline">
+                        ${d.exp.map((e, i) => `
+                            <div class="job-item animate-in" style="animation-delay: ${700 + i * 100}ms">
+                                <div class="job-head">
+                                    <span class="job-role">${e.role}</span>
+                                    <span class="job-date">${e.date}</span>
+                                </div>
+                                <div class="job-comp">${e.comp}</div>
+                                <div class="job-desc">
+                                    <ul>${e.desc.map(x => `<li>${x}</li>`).join('')}</ul>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="section-title animate-in" style="animation-delay: 1000ms"><i class="fas fa-graduation-cap"></i> ${d.titles.edu}</div>
+                    <div class="grid-2">
+                        ${d.edu.map((u, i) => `
+                            <div class="edu-item animate-in" style="animation-delay: ${1050 + i * 50}ms">
+                                <div class="edu-deg">${u.deg}</div>
+                                <div class="edu-uni">${u.uni} | ${u.year}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+
+                    <div class="section-title animate-in" style="animation-delay: 1100ms"><i class="fas fa-cube"></i> ${d.titles.portfolio}</div>
+                    <div class="portfolio-3d animate-in" style="animation-delay: 1150ms; background: rgba(0,0,0,0.3); border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); height: 400px;">
+                        <div class="sketchfab-embed-wrapper" style="height: 100%;">
+                            <iframe 
+                                title="ABB Robot Cell" 
+                                frameborder="0" 
+                                allowfullscreen 
+                                mozallowfullscreen="true" 
+                                webkitallowfullscreen="true" 
+                                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                                xr-spatial-tracking 
+                                execution-while-out-of-viewport 
+                                execution-while-not-rendered 
+                                web-share 
+                                src="https://sketchfab.com/models/521b20c0013f4f7d8497a52e75d99277/embed"
+                                style="width: 100%; height: 100%; border: none;">
+                            </iframe>
+                        </div>
+                        <p style="font-size: 0.6rem; font-weight: normal; margin: 8px 0 0 0; padding: 0 12px; color: var(--text-muted); text-align: center; font-family: 'Inter';">
+                            <a href="https://sketchfab.com/3d-models/abb-robot-cell-521b20c0013f4f7d8497a52e75d99277" target="_blank" rel="nofollow" style="color: var(--orange); text-decoration: none; font-weight: 600;">ABB Robot Cell</a> 
+                            by 
+                            <a href="https://sketchfab.com/SilvestrPolo" target="_blank" rel="nofollow" style="color: var(--orange); text-decoration: none; font-weight: 600;">SilvestrPolo</a>
+                        </p>
+                    </div>
+                </div>
+            `;
+            document.getElementById('cv-root').innerHTML = html;
+        }
+
+        setLang('en');
+    </script>
+</body>
+
+</html>
